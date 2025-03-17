@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Slider from "./components/Slider";
+
+const imagens = [
+  {
+    url: 'https://placehold.co/1440x400/grey/white?text=Hello+World',
+    alt: 'Texto 1',
+    link: 'https://example.com/1'
+  },
+  {
+    url: 'https://placehold.co/1440x400/black/white?text=Hello\nWorld',
+    alt: 'Texto 2',
+    link: 'https://example.com/2'
+  },
+  {
+    url: 'https://placehold.co/1440x400/fcc/black?text=Hello\nWorld',
+    alt: 'Texto 3',
+    link: 'https://example.com/3'
+  }
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Slider imagens={imagens} />
     </div>
   );
 }
